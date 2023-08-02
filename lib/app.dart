@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:gurte_jaba/modules/detail/view/detail_page.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:gurte_jaba/modules/welcome/cubit/welcome_cubit.dart';
+import 'package:gurte_jaba/modules/welcome/view/welcome_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -13,7 +15,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const DetailPage(),
+      home: BlocBuilder<WelcomeCubit, WelcomeState>(
+        builder: (context, state) {
+          return const WelcomePage();
+        },
+      ),
     );
   }
 }

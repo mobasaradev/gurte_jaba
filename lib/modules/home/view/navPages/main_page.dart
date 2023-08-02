@@ -5,8 +5,8 @@ import 'package:gurte_jaba/theme/app_color_theme.dart';
 import 'package:gurte_jaba/theme/app_text_theme.dart';
 import 'package:gurte_jaba/utils/asset_paths.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class MainPage extends StatelessWidget {
+  const MainPage({super.key});
 
   @override
   Widget build(BuildContext context) {

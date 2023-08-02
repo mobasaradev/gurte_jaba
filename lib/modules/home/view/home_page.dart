@@ -4,16 +4,16 @@ import 'package:gurte_jaba/modules/home/view/navPages/main_page.dart';
 import 'package:gurte_jaba/modules/home/view/navPages/profile_page.dart';
 import 'package:gurte_jaba/modules/home/view/navPages/search_page.dart';
 
-class MainPage extends StatefulWidget {
-  const MainPage({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<MainPage> createState() => _MainPageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _MainPageState extends State<MainPage> {
+class _HomePageState extends State<HomePage> {
   List pages = [
-    const HomePage(),
+    const MainPage(),
     const BarPage(),
     const SearchPage(),
     const ProfilePage(),

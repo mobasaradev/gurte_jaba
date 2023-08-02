@@ -8,43 +8,50 @@ class CustomButton extends StatelessWidget {
     super.key,
     this.isResponsive = false,
     this.widget = 120,
+    this.onTap,
+    this.pageName,
   });
   final bool? isResponsive;
   final double? widget;
+  final dynamic pageName;
+  final GestureTapCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
     return Flexible(
-      child: Container(
-        width: isResponsive == true ? double.maxFinite : widget,
-        height: 60,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          color: AppColorTheme.mainColor,
-        ),
-        child: Row(
-          mainAxisAlignment: isResponsive == true
-              ? MainAxisAlignment.spaceBetween
-              : MainAxisAlignment.center,
-          children: [
-            isResponsive == true
-                ? Padding(
-                    padding: const EdgeInsets.only(left: 20),
-                    child: Text(
-                      "Book Trip Now",
-                      style: AppTextTheme.common.bodySmall!.copyWith(
-                        color: Colors.white,
+      child: InkWell(
+        onTap: onTap,
+        child: Container(
+          width: isResponsive == true ? double.maxFinite : widget,
+          height: 60,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: AppColorTheme.mainColor,
+          ),
+          child: Row(
+            mainAxisAlignment: isResponsive == true
+                ? MainAxisAlignment.spaceBetween
+                : MainAxisAlignment.center,
+            children: [
+              isResponsive == true
+                  ? Padding(
+                      padding: const EdgeInsets.only(left: 20),
+                      child: Text(
+                        "Book Trip Now",
+                        style: AppTextTheme.common.bodySmall!.copyWith(
+                          color: Colors.white,
+                        ),
                       ),
-                    ),
-                  )
-                : Container(),
-            isResponsive == true
-                ? Padding(
-                    padding: const EdgeInsets.only(right: 20),
-                    child: Image.asset(AssetPaths.btnIcon, width: 30),
-                  )
-                : Image.asset(AssetPaths.btnIcon, width: 30)
-          ],
+                    )
+                  : Container(),
+              isResponsive == true
+                  ? Padding(
+                      padding: const EdgeInsets.only(right: 20),
+                      child: Image.asset(AssetPaths.btnIcon, width: 30),
+                    )
+                  : Image.asset(AssetPaths.btnIcon, width: 30)
+            ],
+          ),
         ),
       ),
     );
