@@ -3,7 +3,7 @@ import 'package:gurte_jaba/theme/app_color_theme.dart';
 import 'package:gurte_jaba/theme/app_text_theme.dart';
 import 'package:gurte_jaba/utils/asset_paths.dart';
 
-import 'indecator_printer.dart';
+import 'indicator_printer.dart';
 
 class CustomTabBar extends StatefulWidget {
   const CustomTabBar({super.key});
