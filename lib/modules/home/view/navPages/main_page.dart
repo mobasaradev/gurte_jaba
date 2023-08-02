@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:gurte_jaba/modules/main/widgets/custom_explore.dart';
-import 'package:gurte_jaba/modules/main/widgets/custom_tab_bar.dart';
+import 'package:gurte_jaba/modules/home/widgets/custom_explore.dart';
+import 'package:gurte_jaba/modules/home/widgets/custom_tab_bar.dart';
 import 'package:gurte_jaba/theme/app_color_theme.dart';
 import 'package:gurte_jaba/theme/app_text_theme.dart';
+import 'package:gurte_jaba/utils/asset_paths.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -11,7 +12,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(top: 50, left: 20),
+        padding: const EdgeInsets.only(top: 60, left: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -31,22 +32,25 @@ class HomePage extends StatelessWidget {
                     height: 50,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.grey.withOpacity(0.5),
+                      image: const DecorationImage(
+                        image: AssetImage(AssetPaths.snorkeling),
+                      ),
+                      color: Colors.grey.withOpacity(0.2),
                     ),
                   )
                 ],
               ),
             ),
-            const SizedBox(height: 30),
+            const SizedBox(height: 40),
             // Discover text
             Text(
               'Discover',
               style: AppTextTheme.common.headlineLarge,
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 30),
             // Tab Bar
             const CustomTabBar(),
-            const SizedBox(height: 30),
+            const SizedBox(height: 40),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

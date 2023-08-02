@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gurte_jaba/modules/main/view/main_page.dart';
+import 'package:gurte_jaba/modules/detail/view/detail_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -7,12 +7,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Gurte Jaba',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MainPage(),
+      home: const DetailPage(),
     );
   }
 }

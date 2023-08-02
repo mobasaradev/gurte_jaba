@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:gurte_jaba/modules/main/view/navPages/bar_page.dart';
-import 'package:gurte_jaba/modules/main/view/navPages/home_page.dart';
-import 'package:gurte_jaba/modules/main/view/navPages/profile_page.dart';
-import 'package:gurte_jaba/modules/main/view/navPages/search_page.dart';
+import 'package:gurte_jaba/modules/home/view/navPages/bar_page.dart';
+import 'package:gurte_jaba/modules/home/view/navPages/main_page.dart';
+import 'package:gurte_jaba/modules/home/view/navPages/profile_page.dart';
+import 'package:gurte_jaba/modules/home/view/navPages/search_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
