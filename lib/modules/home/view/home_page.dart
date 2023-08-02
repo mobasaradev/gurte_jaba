@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gurte_jaba/modules/home/view/navPages/bar_page.dart';
-import 'package:gurte_jaba/modules/home/view/navPages/main_page.dart';
-import 'package:gurte_jaba/modules/home/view/navPages/profile_page.dart';
-import 'package:gurte_jaba/modules/home/view/navPages/search_page.dart';
+import 'package:gurte_jaba/modules/modules.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

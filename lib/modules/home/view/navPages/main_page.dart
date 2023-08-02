@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:gurte_jaba/modules/home/widgets/custom_explore.dart';
-import 'package:gurte_jaba/modules/home/widgets/custom_tab_bar.dart';
-import 'package:gurte_jaba/theme/app_color_theme.dart';
-import 'package:gurte_jaba/theme/app_text_theme.dart';
+import 'package:gurte_jaba/modules/modules.dart';
+import 'package:gurte_jaba/theme/theme.dart';
 import 'package:gurte_jaba/utils/asset_paths.dart';
+
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gurte_jaba/modules/detail/widgets/custom_button.dart';
-import 'package:gurte_jaba/modules/widgets/custom_button.dart';
-import 'package:gurte_jaba/theme/app_color_theme.dart';
-import 'package:gurte_jaba/theme/app_text_theme.dart';
+import 'package:gurte_jaba/modules/modules.dart';
+import 'package:gurte_jaba/theme/theme.dart';
 import 'package:gurte_jaba/utils/asset_paths.dart';
 
 class DetailPage extends StatefulWidget {
@@ -63,8 +61,9 @@ class _DetailPageState extends State<DetailPage> {
                 decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(30),
-                      topRight: Radius.circular(30)),
+                    topLeft: Radius.circular(30),
+                    topRight: Radius.circular(30),
+                  ),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
