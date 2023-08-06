@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gurte_jaba/modules/welcome/cubit/welcome_cubit.dart';
-import 'package:gurte_jaba/modules/welcome/view/welcome_page.dart';
+import 'package:gurte_jaba/shared/shared.dart';
+
+import 'modules/cubit/app_cubit.dart';
+import 'modules/cubit/app_cubit_logic.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -15,17 +17,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: BlocBuilder<WelcomeCubit, WelcomeState>(
-        builder: (context, state) {
-          if (state.status == WelcomeStatus.initial) {
-            return const WelcomePage();
-          } else if (state.status == WelcomeStatus.loading) {
-            return const Center(
-              child: CircularProgressIndicator(),
-            );
-          } else {}
-          return const WelcomePage();
-        },
+      home: BlocProvider<AppCubit>(
+        create: (context) => AppCubit(data: RepositoryImpl()),
+        child: const AppCubitLogic(),
       ),
     );
   }

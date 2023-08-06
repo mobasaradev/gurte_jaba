@@ -1,17 +1,23 @@
 import 'dart:convert';
+import 'dart:io';
+
 import 'package:gurte_jaba/shared/shared.dart';
+import 'package:http/http.dart' as http;
 
 class RepositoryImpl implements Repository {
-  RepositoryImpl(this.networkUtils);
+  static const basedURL = 'http://mark.bslmeiyu.com/api';
 
-  final NetworkUtils networkUtils;
   @override
   Future<List<DataResponse>> getDataResponse() async {
+    const url = '/getplaces';
+    http.Response response = await http.get(
+      Uri.parse(basedURL + url),
+    );
     try {
-      final response = await networkUtils.get(UrlConstants.url);
-      if (response.statusCode == 200) {
-        final List<dynamic> list = jsonDecode(response.body);
-        return list.map((e) => DataResponse.fromJson(e)).toList();
+      if (response.statusCode == HttpStatus.ok) {
+        final List<dynamic> json = jsonDecode(response.body);
+        print(json);
+        return json.map((e) => DataResponse.fromJson(e)).toList();
       } else {
         throw Exception('API call not successful : ${response.statusCode}');
       }

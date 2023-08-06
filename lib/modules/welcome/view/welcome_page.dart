@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:gurte_jaba/modules/cubit/app_cubit.dart';
 import 'package:gurte_jaba/modules/modules.dart';
 import 'package:gurte_jaba/theme/theme.dart';
 import 'package:gurte_jaba/utils/utils.dart';
-
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key});
@@ -59,7 +60,7 @@ class _WelcomePageState extends State<WelcomePage> {
                       SizedBox(
                         width: 250,
                         child: Text(
-                          "Travelling the road will tell you more about the road than the google will tell you about the road.",
+                          "Traveling the road will tell you more about the road than the google will tell you about the road.",
                           style: AppTextTheme.common.bodySmall?.copyWith(
                             color: AppColorTheme.textColor2,
                           ),
@@ -69,12 +70,7 @@ class _WelcomePageState extends State<WelcomePage> {
                       CustomButton(
                         widget: 120,
                         onTap: () {
-                          Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const HomePage(),
-                            ),
-                          );
+                          BlocProvider.of<AppCubit>(context).getData();
                         },
                       ),
                     ],

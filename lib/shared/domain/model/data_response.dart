@@ -10,11 +10,11 @@ class DataResponse {
   });
 
   String name;
-  String description;
-  int price;
-  int stars;
-  int people;
   String img;
+  int price;
+  int people;
+  int stars;
+  String description;
   String location;
 
   factory DataResponse.fromJson(Map<String, dynamic> json) => DataResponse(
@@ -26,16 +26,4 @@ class DataResponse {
         img: json['img'],
         location: json['location'],
       );
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['name'] = name;
-    data['description'] = description;
-    data['price'] = price;
-    data['stars'] = stars;
-    data['people'] = people;
-    data['img'] = img;
-    data['location'] = location;
-    return data;
-  }
 }

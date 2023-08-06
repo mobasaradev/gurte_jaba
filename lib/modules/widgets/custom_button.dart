@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:gurte_jaba/theme/theme.dart';
 import 'package:gurte_jaba/utils/utils.dart';
 
-
 class CustomButton extends StatelessWidget {
   const CustomButton({
     super.key,
@@ -38,9 +37,8 @@ class CustomButton extends StatelessWidget {
                       padding: const EdgeInsets.only(left: 20),
                       child: Text(
                         "Book Trip Now",
-                        style: AppTextTheme.common.bodySmall!.copyWith(
-                          color: Colors.white,
-                        ),
+                        style: AppTextTheme.common.bodySmall!
+                            .copyWith(color: Colors.white),
                       ),
                     )
                   : Container(),
@@ -49,7 +47,7 @@ class CustomButton extends StatelessWidget {
                       padding: const EdgeInsets.only(right: 20),
                       child: Image.asset(AssetPaths.btnIcon, width: 30),
                     )
-                  : Image.asset(AssetPaths.btnIcon, width: 30)
+                  : Image.asset(AssetPaths.btnIcon, width: 30),
             ],
           ),
         ),

@@ -10,7 +10,6 @@ export 'home/view/navPages/search_page.dart';
 export 'home/widgets/custom_explore.dart';
 export 'home/widgets/custom_tab_bar.dart';
 export 'home/widgets/indicator_printer.dart';
-export 'welcome/cubit/welcome_cubit.dart';
 export 'welcome/view/welcome_page.dart';
 export 'welcome/welcome.dart';
 export 'widgets/custom_button.dart';

@@ -3,7 +3,6 @@ import 'package:gurte_jaba/modules/modules.dart';
 import 'package:gurte_jaba/theme/theme.dart';
 import 'package:gurte_jaba/utils/asset_paths.dart';
 
-
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
 
