@@ -7,4 +7,10 @@ class WelcomeCubit extends Cubit<WelcomeState> {
   WelcomeCubit() : super(const WelcomeState()) {
     emit(state.copyWith(status: WelcomeStatus.success));
   }
+
+  void getDataResponse() async {
+    try {
+      emit(state.copyWith(status: WelcomeStatus.loading));
+    } catch (e) {}
+  }
 }

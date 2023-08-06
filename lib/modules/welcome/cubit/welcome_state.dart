@@ -1,6 +1,11 @@
 part of 'welcome_cubit.dart';
 
-enum WelcomeStatus { initial, success }
+enum WelcomeStatus {
+  initial,
+  loading,
+  loaded,
+  success,
+}
 
 class WelcomeState extends Equatable {
   const WelcomeState({this.status = WelcomeStatus.initial});

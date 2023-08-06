@@ -9,23 +9,23 @@ class DataResponse {
     required this.location,
   });
 
-  String? name;
-  String? description;
-  int? price;
-  int? stars;
-  int? people;
-  String? img;
-  String? location;
+  String name;
+  String description;
+  int price;
+  int stars;
+  int people;
+  String img;
+  String location;
 
-  DataResponse.fromJson(Map<String, dynamic> json) {
-    name = json['name'];
-    description = json['description'];
-    price = json['price'];
-    stars = json['stars'];
-    people = json['people'];
-    img = json['img'];
-    location = json['location'];
-  }
+  factory DataResponse.fromJson(Map<String, dynamic> json) => DataResponse(
+        name: json['name'],
+        description: json['description'],
+        price: json['price'],
+        stars: json['stars'],
+        people: json['people'],
+        img: json['img'],
+        location: json['location'],
+      );
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};

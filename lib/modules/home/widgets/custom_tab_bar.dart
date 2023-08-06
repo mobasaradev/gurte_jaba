@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:gurte_jaba/theme/app_color_theme.dart';
-import 'package:gurte_jaba/theme/app_text_theme.dart';
-import 'package:gurte_jaba/utils/asset_paths.dart';
+import 'package:gurte_jaba/theme/theme.dart';
+import 'package:gurte_jaba/utils/utils.dart';
+
 
 import 'indicator_printer.dart';
 

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gurte_jaba/modules/modules.dart';
 import 'package:gurte_jaba/theme/theme.dart';
-import 'package:gurte_jaba/utils/asset_paths.dart';
+import 'package:gurte_jaba/utils/utils.dart';
+
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key});

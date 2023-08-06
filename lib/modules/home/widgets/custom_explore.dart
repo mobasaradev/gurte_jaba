@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gurte_jaba/theme/app_color_theme.dart';
-import 'package:gurte_jaba/theme/app_text_theme.dart';
-import 'package:gurte_jaba/utils/asset_paths.dart';
+import 'package:gurte_jaba/theme/theme.dart';
+import 'package:gurte_jaba/utils/utils.dart';
 
 class CustomExplore extends StatelessWidget {
   const CustomExplore({super.key});
@@ -41,12 +40,10 @@ class CustomExplore extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 8),
-                Container(
-                  child: Text(
-                    images.values.elementAt(index),
-                    style: AppTextTheme.common.bodySmall!.copyWith(
-                      color: AppColorTheme.textColor2,
-                    ),
+                Text(
+                  images.values.elementAt(index),
+                  style: AppTextTheme.common.bodySmall!.copyWith(
+                    color: AppColorTheme.textColor2,
                   ),
                 ),
               ],

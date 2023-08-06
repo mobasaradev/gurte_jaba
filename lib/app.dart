@@ -17,6 +17,13 @@ class MyApp extends StatelessWidget {
       ),
       home: BlocBuilder<WelcomeCubit, WelcomeState>(
         builder: (context, state) {
+          if (state.status == WelcomeStatus.initial) {
+            return const WelcomePage();
+          } else if (state.status == WelcomeStatus.loading) {
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
+          } else {}
           return const WelcomePage();
         },
       ),
