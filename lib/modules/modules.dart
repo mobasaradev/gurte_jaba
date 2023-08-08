@@ -1,3 +1,5 @@
+export 'cubit/app_cubit.dart';
+export 'cubit/app_cubit_logic.dart';
 export 'detail/detail.dart';
 export 'detail/view/detail_page.dart';
 export 'detail/widgets/custom_button.dart';

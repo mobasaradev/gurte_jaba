@@ -86,7 +86,7 @@ class _CustomTabBarState extends State<CustomTabBar>
                                       color: Colors.white,
                                     ),
                                     Text(
-                                      "Place Name",
+                                      info[index].name,
                                       style:
                                           AppTextTheme.common.bodySmall?.copyWith(
                                         color: Colors.white,
@@ -98,7 +98,7 @@ class _CustomTabBarState extends State<CustomTabBar>
                                 Padding(
                                   padding: const EdgeInsets.only(left: 10),
                                   child: Text(
-                                    "City, Country",
+                                    info[index].location,
                                     style:
                                         AppTextTheme.common.bodySmall?.copyWith(
                                       color: Colors.grey,

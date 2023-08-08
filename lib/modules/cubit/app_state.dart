@@ -20,15 +20,15 @@ class LoadingState extends AppState {
 class LoadedState extends AppState {
   LoadedState(this.places);
   final List<DataResponse> places;
-  
+
   @override
   List<Object> get props => [places];
 }
 
 class DetailState extends AppState {
-  DetailState(this.places);
-  final DataResponse places;
-  
+  DetailState(this.place);
+  final DataResponse place;
+
   @override
-  List<Object> get props => [places];
+  List<Object> get props => [place];
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gurte_jaba/modules/cubit/app_cubit.dart';
 import 'package:gurte_jaba/modules/modules.dart';
 import 'package:gurte_jaba/theme/theme.dart';
 
@@ -12,7 +11,6 @@ class DetailPage extends StatefulWidget {
 }
 
 class _DetailPageState extends State<DetailPage> {
-  int gottenStar = 4;
   int selectedIndex = -1;
   @override
   Widget build(BuildContext context) {
@@ -34,7 +32,7 @@ class _DetailPageState extends State<DetailPage> {
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         image: NetworkImage(
-                          'http://mark.bslmeiyu.com/uploads/${detail.places.img}',
+                          'http://mark.bslmeiyu.com/uploads/${detail.place.img}',
                         ),
                         fit: BoxFit.cover,
                       ),
@@ -81,7 +79,7 @@ class _DetailPageState extends State<DetailPage> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              detail.places.name,
+                              detail.place.name,
                               style:
                                   AppTextTheme.common.headlineLarge!.copyWith(
                                 color: Colors.black.withOpacity(0.8),
@@ -89,7 +87,7 @@ class _DetailPageState extends State<DetailPage> {
                               ),
                             ),
                             Text(
-                              "\$ ${detail.places.price}",
+                              "\$ ${detail.place.price}",
                               style:
                                   AppTextTheme.common.headlineLarge!.copyWith(
                                 color: AppColorTheme.mainColor,
@@ -107,7 +105,7 @@ class _DetailPageState extends State<DetailPage> {
                             ),
                             const SizedBox(width: 5),
                             Text(
-                              detail.places.location,
+                              detail.place.location,
                               style: AppTextTheme.common.bodySmall!.copyWith(
                                 fontWeight: FontWeight.w700,
                                 color: AppColorTheme.textColor1,
@@ -123,7 +121,7 @@ class _DetailPageState extends State<DetailPage> {
                                 5,
                                 (index) => Icon(
                                   Icons.star,
-                                  color: detail.places.stars > index
+                                  color: detail.place.stars > index
                                       ? AppColorTheme.starColor
                                       : AppColorTheme.textColor2,
                                 ),
@@ -149,7 +147,7 @@ class _DetailPageState extends State<DetailPage> {
                         ),
                         const SizedBox(height: 5),
                         Text(
-                          detail.places.people.toString(),
+                          detail.place.people.toString(),
                           style: AppTextTheme.common.bodySmall!.copyWith(
                             color: AppColorTheme.textColor2,
                           ),
@@ -193,7 +191,7 @@ class _DetailPageState extends State<DetailPage> {
                         ),
                         const SizedBox(height: 5),
                         Text(
-                          detail.places.description,
+                          detail.place.description,
                           style: AppTextTheme.common.bodySmall!.copyWith(
                             color: AppColorTheme.textColor2,
                           ),
